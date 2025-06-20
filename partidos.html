@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partidos - SportBoard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-left">
+            <span class="app-name">SportBoard</span>
+            <nav>
+                <a href="#" class="nav-link">Inicio</a>
+                <a href="partidos.html" class="nav-link active">Partidos</a>
+                <a href="equipos.html" class="nav-link">Equipos</a>
+                <a href="atletas.html" class="nav-link">Atletas</a>
+                <a href="competiciones.html" class="nav-link">Competiciones</a>
+            </nav>
+        </div>
+        <div class="navbar-right">
+            <input type="text" class="search-bar" placeholder="Buscar...">
+            <button class="icon-btn notification-btn" title="Notificaciones">🔔</button>
+            <button class="icon-btn profile-btn" title="Perfil de usuario">👤</button>
+        </div>
+    </header>
+    <div class="page-layout">
+        <aside class="sidebar">
+            <nav>
+                <a href="index.html" class="sidebar-link">🏠 Inicio</a>
+                <a href="partidos.html" class="sidebar-link active">⚽ Partidos</a>
+                <a href="equipos.html" class="sidebar-link">🛡️ Equipos</a>
+                <a href="atletas.html" class="sidebar-link">👟 Atletas</a>
+                <a href="competiciones.html" class="sidebar-link">🏆 Competiciones</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <section class="partidos-section">
+                <h2>Próximos Partidos</h2>
+                <table class="tabla-partidos">
+                    <thead>
+                        <tr><th>Fecha</th><th>Hora</th><th>Equipo Local</th><th></th><th>Equipo Visitante</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>20/06/2025</td><td>18:00</td><td>Real Madrid</td><td>vs</td><td>Barcelona</td></tr>
+                        <tr><td>21/06/2025</td><td>20:00</td><td>Manchester City</td><td>vs</td><td>PSG</td></tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="partidos-section">
+                <h2>Partidos Jugados</h2>
+                <table class="tabla-partidos">
+                    <thead>
+                        <tr><th>Fecha</th><th>Hora</th><th>Equipo Local</th><th></th><th>Equipo Visitante</th><th>Resultado</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>15/06/2025</td><td>19:00</td><td>Real Madrid</td><td>vs</td><td>PSG</td><td>2 - 1</td></tr>
+                        <tr><td>16/06/2025</td><td>21:00</td><td>Barcelona</td><td>vs</td><td>Manchester City</td><td>1 - 3</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

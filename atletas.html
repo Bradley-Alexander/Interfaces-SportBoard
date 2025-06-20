@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atletas - SportBoard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-left">
+            <span class="app-name">SportBoard</span>
+            <nav>
+                <a href="#" class="nav-link">Inicio</a>
+                <a href="partidos.html" class="nav-link">Partidos</a>
+                <a href="equipos.html" class="nav-link">Equipos</a>
+                <a href="atletas.html" class="nav-link active">Atletas</a>
+                <a href="competiciones.html" class="nav-link">Competiciones</a>
+            </nav>
+        </div>
+        <div class="navbar-right">
+            <input type="text" class="search-bar" placeholder="Buscar...">
+            <button class="icon-btn notification-btn" title="Notificaciones">🔔</button>
+            <button class="icon-btn profile-btn" title="Perfil de usuario">👤</button>
+        </div>
+    </header>
+    <div class="page-layout">
+        <aside class="sidebar">
+            <nav>
+                <a href="index.html" class="sidebar-link">🏠 Inicio</a>
+                <a href="atletas.html" class="sidebar-link active">👟 Atletas</a>
+                <a href="equipos.html" class="sidebar-link">🛡️ Equipos</a>
+                <a href="partidos.html" class="sidebar-link">⚽ Partidos</a>
+                <a href="competiciones.html" class="sidebar-link">🏆 Competiciones</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <section class="atletas-section">
+                <h2>Atletas</h2>
+                <table class="tabla-atletas">
+                    <thead>
+                        <tr><th>Jugador</th><th>Equipo</th><th>Goles</th><th>Asistencias</th><th>Partidos Jugados</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Lionel Messi</td><td>Inter Miami</td><td>10</td><td>7</td><td>12</td></tr>
+                        <tr><td>Erling Haaland</td><td>Manchester City</td><td>12</td><td>3</td><td>13</td></tr>
+                        <tr><td>Vinícius Jr</td><td>Real Madrid</td><td>8</td><td>5</td><td>11</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

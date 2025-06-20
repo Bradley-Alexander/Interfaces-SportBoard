@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipos - SportBoard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-left">
+            <span class="app-name">SportBoard</span>
+            <nav>
+                <a href="#" class="nav-link">Inicio</a>
+                <a href="partidos.html" class="nav-link">Partidos</a>
+                <a href="equipos.html" class="nav-link active">Equipos</a>
+                <a href="atletas.html" class="nav-link">Atletas</a>
+                <a href="competiciones.html" class="nav-link">Competiciones</a>
+            </nav>
+        </div>
+        <div class="navbar-right">
+            <input type="text" class="search-bar" placeholder="Buscar...">
+            <button class="icon-btn notification-btn" title="Notificaciones">🔔</button>
+            <button class="icon-btn profile-btn" title="Perfil de usuario">👤</button>
+        </div>
+    </header>
+    <div class="page-layout">
+        <aside class="sidebar">
+            <nav>
+                <a href="index.html" class="sidebar-link">🏠 Inicio</a>
+                <a href="equipos.html" class="sidebar-link active">🛡️ Equipos</a>
+                <a href="partidos.html" class="sidebar-link">⚽ Partidos</a>
+                <a href="atletas.html" class="sidebar-link">👟 Atletas</a>
+                <a href="competiciones.html" class="sidebar-link">🏆 Competiciones</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <section class="equipos-section">
+                <h2>Equipos</h2>
+                <table class="tabla-equipos">
+                    <thead>
+                        <tr><th>Equipo</th><th>Competición</th><th>Jugadores</th><th>Partidos Jugados</th><th>Victorias</th><th>Empates</th><th>Derrotas</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Real Madrid</td><td>Champions League</td><td>25</td><td>6</td><td>5</td><td>1</td><td>0</td></tr>
+                        <tr><td>Barcelona</td><td>La Liga</td><td>24</td><td>6</td><td>5</td><td>1</td><td>0</td></tr>
+                        <tr><td>Manchester City</td><td>Champions League</td><td>26</td><td>6</td><td>4</td><td>1</td><td>1</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,509 @@
+body {
+    margin: 0;
+    font-family: Arial, 'Segoe UI', 'Times New Roman', Times, serif;
+    background: #fff;
+    color: #222;
+}
+
+:root {
+    --main-orange: #b05a19; /* naranja oscuro/café */
+    --main-orange-light: #e6b07a;
+    --main-orange-bg: #f8f4f1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-bottom: 1px solid var(--main-orange-light);
+    padding: 0.5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.app-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--main-orange);
+    margin-right: 2rem;
+    letter-spacing: 1px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    padding: 0.2rem 0.7rem;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-link.active, .nav-link:hover {
+    background: var(--main-orange);
+    color: #fff;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.search-bar {
+    padding: 0.3rem 1rem;
+    border: 1px solid var(--main-orange-light);
+    border-radius: 16px;
+    outline: none;
+    font-size: 1rem;
+    background: #fff;
+    color: #222;
+    transition: border 0.2s;
+}
+
+.search-bar:focus {
+    border: 1.5px solid var(--main-orange);
+}
+
+.icon-btn {
+    background: #fff;
+    border: 1px solid var(--main-orange-light);
+    color: var(--main-orange);
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.icon-btn:hover {
+    background: var(--main-orange);
+    color: #fff;
+    border: 1px solid var(--main-orange);
+}
+
+.main-content {
+    width: 100vw;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: var(--main-orange-bg);
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.stats-header {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--main-orange-light);
+    padding: 1.5rem 2vw 0.5rem 2vw;
+}
+
+.stats-tab {
+    background: transparent;
+    border: none;
+    color: var(--main-orange);
+    padding: 0.5rem 1.2rem;
+    border-radius: 16px 16px 0 0;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.stats-tab.active, .stats-tab:hover {
+    background: var(--main-orange);
+    color: #fff;
+}
+
+.stats-content {
+    display: block;
+    padding: 1rem 2vw 0 2vw;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.stats-content.hidden {
+    display: none;
+}
+
+.stats-graph {
+    width: 100%;
+    max-width: 100%;
+    margin: 1.5rem auto 0 auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(176, 90, 25, 0.08);
+}
+
+.bar-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 2vw;
+    height: 180px;
+    margin: 2rem 0 1rem 0;
+    padding: 0;
+    background: none;
+    width: 100%;
+}
+
+.bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 40px;
+    height: 100%;
+}
+
+.bar::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: var(--bar-value, 50%);
+    background: var(--main-orange);
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 1px 4px rgba(176, 90, 25, 0.10);
+    transition: height 0.4s;
+}
+
+.bar span {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #444;
+    text-align: center;
+}
+
+.pie-chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0 1rem 0;
+}
+
+canvas {
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 4px rgba(176, 90, 25, 0.08);
+}
+
+.perfil-layout {
+    display: flex;
+    min-height: 100vh;
+    background: var(--main-orange-bg);
+}
+
+.sidebar {
+    width: 220px;
+    min-height: 100vh;
+    height: 100vh;
+    background: #fff;
+    border-right: 1px solid var(--main-orange-light);
+    padding: 2rem 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+    color: #222;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px 0 0 8px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.sidebar-link.active, .sidebar-link:hover {
+    background: var(--main-orange);
+    color: #fff;
+}
+
+.perfil-main {
+    flex: 1;
+    margin-left: 220px;
+    padding: 2.5rem 3vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.perfil-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.perfil-tab {
+    background: transparent;
+    border: 1.5px solid var(--main-orange-light);
+    color: var(--main-orange);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.perfil-tab.active, .perfil-tab:hover {
+    background: var(--main-orange);
+    color: #fff;
+    border: 1.5px solid var(--main-orange);
+}
+
+.perfil-content {
+    display: block;
+}
+
+.perfil-content.hidden {
+    display: none;
+}
+
+.perfil-list h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--main-orange);
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.perfil-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
+
+.perfil-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.4rem 0;
+    font-size: 1rem;
+    color: #222;
+}
+
+.perfil-list img {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    object-fit: cover;
+    background: var(--main-orange-bg);
+    border: 1px solid var(--main-orange-light);
+}
+
+.competiciones-layout {
+    display: flex;
+    min-height: 100vh;
+    background: var(--main-orange-bg);
+}
+
+.competiciones-sidebar {
+    width: 220px;
+    background: #fff;
+    border-right: 1px solid var(--main-orange-light);
+    padding: 2rem 0 2rem 0;
+}
+
+.competiciones-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.comp-link {
+    padding: 0.8rem 1.2rem;
+    font-size: 1.1rem;
+    color: #222;
+    cursor: pointer;
+    border-radius: 8px 0 0 8px;
+    margin-bottom: 0.5rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.comp-link.active, .comp-link:hover {
+    background: var(--main-orange);
+    color: #fff;
+}
+
+.competiciones-main {
+    flex: 1;
+    padding: 2.5rem 3vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.comp-content {
+    display: block;
+}
+
+.comp-content.hidden {
+    display: none;
+}
+
+.tabla-posiciones {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 6px rgba(176, 90, 25, 0.06);
+}
+
+.tabla-posiciones th, .tabla-posiciones td {
+    padding: 0.7rem 0.5rem;
+    text-align: center;
+    border-bottom: 1px solid var(--main-orange-bg);
+}
+
+.tabla-posiciones th {
+    background: var(--main-orange-bg);
+    color: var(--main-orange);
+    font-weight: 600;
+}
+
+.tabla-posiciones tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-partidos, .tabla-equipos, .tabla-atletas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 6px rgba(176, 90, 25, 0.06);
+}
+
+.tabla-partidos th, .tabla-partidos td,
+.tabla-equipos th, .tabla-equipos td,
+.tabla-atletas th, .tabla-atletas td {
+    padding: 0.7rem 0.5rem;
+    text-align: center;
+    border-bottom: 1px solid var(--main-orange-bg);
+}
+
+.tabla-partidos th, .tabla-equipos th, .tabla-atletas th {
+    background: var(--main-orange-bg);
+    color: var(--main-orange);
+    font-weight: 600;
+}
+
+.tabla-partidos tr:last-child td,
+.tabla-equipos tr:last-child td,
+.tabla-atletas tr:last-child td {
+    border-bottom: none;
+}
+
+.partidos-section, .equipos-section, .atletas-section {
+    margin-bottom: 2.5rem;
+}
+
+@media (max-width: 700px) {
+    .main-content {
+        padding: 0.5rem;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem 1rem;
+    }
+    .navbar-right {
+        margin-top: 0.5rem;
+    }
+    .stats-header {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .page-layout {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100vw;
+        min-height: unset;
+        height: auto;
+        flex-direction: row;
+        border-right: none;
+        border-bottom: 1px solid var(--main-orange-light);
+        padding: 0.5rem 0;
+        justify-content: center;
+        position: static;
+    }
+    .sidebar nav {
+        flex-direction: row;
+        gap: 0.5rem;
+        width: auto;
+    }
+    .sidebar-link {
+        border-radius: 8px;
+        padding: 0.5rem 0.8rem;
+        font-size: 1rem;
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 1.5rem 2vw;
+    }
+}
+
+body.grayscale-mode {
+    filter: grayscale(1) contrast(1.1);
+}
+
+.toggle-access {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1000;
+    background: #fff;
+    border: 2px solid var(--main-orange-light);
+    color: #222;
+    border-radius: 24px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(176, 90, 25, 0.10);
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.toggle-access.active, .toggle-access:hover {
+    background: var(--main-orange);
+    color: #fff;
+    border: 2px solid var(--main-orange);
+}

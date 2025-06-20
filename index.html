@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportBoard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-left">
+            <span class="app-name">SportBoard</span>
+            <nav>
+                <a href="#" class="nav-link active">Inicio</a>
+                <a href="#" class="nav-link">Partidos</a>
+                <a href="#" class="nav-link">Equipos</a>
+                <a href="#" class="nav-link">Atletas</a>
+                <a href="#" class="nav-link">Competiciones</a>
+            </nav>
+        </div>
+        <div class="navbar-right">
+            <input type="text" class="search-bar" placeholder="Buscar...">
+            <button class="icon-btn notification-btn" title="Notificaciones">🔔</button>
+            <button class="icon-btn profile-btn" title="Perfil de usuario">👤</button>
+        </div>
+    </header>
+    <main class="main-content">
+        <section class="stats-header">
+            <button class="stats-tab active" data-tab="general">Vista General</button>
+            <button class="stats-tab" data-tab="equipos">Estadísticas de Equipos</button>
+            <button class="stats-tab" data-tab="atletas">Estadísticas de Atleta</button>
+        </section>
+        <section class="stats-content" id="stats-general">
+            <h2>Vista General</h2>
+            <div class="bar-chart">
+                <div class="bar" style="--bar-value: 80%"><span>Equipo A</span></div>
+                <div class="bar" style="--bar-value: 60%"><span>Equipo B</span></div>
+                <div class="bar" style="--bar-value: 40%"><span>Equipo C</span></div>
+                <div class="bar" style="--bar-value: 70%"><span>Equipo D</span></div>
+                <div class="bar" style="--bar-value: 50%"><span>Equipo E</span></div>
+            </div>
+        </section>
+        <section class="stats-content hidden" id="stats-equipos">
+            <h2>Estadísticas de Equipos</h2>
+            <div class="bar-chart">
+                <div class="bar" style="--bar-value: 90%"><span>Equipo X</span></div>
+                <div class="bar" style="--bar-value: 65%"><span>Equipo Y</span></div>
+                <div class="bar" style="--bar-value: 50%"><span>Equipo Z</span></div>
+                <div class="bar" style="--bar-value: 80%"><span>Equipo W</span></div>
+            </div>
+            <div class="pie-chart-container">
+                <canvas id="pie-equipos" width="300" height="300"></canvas>
+            </div>
+        </section>
+        <section class="stats-content hidden" id="stats-atletas">
+            <h2>Estadísticas de Atleta</h2>
+            <div class="bar-chart">
+                <div class="bar" style="--bar-value: 70%"><span>Atleta 1</span></div>
+                <div class="bar" style="--bar-value: 55%"><span>Atleta 2</span></div>
+                <div class="bar" style="--bar-value: 40%"><span>Atleta 3</span></div>
+                <div class="bar" style="--bar-value: 85%"><span>Atleta 4</span></div>
+            </div>
+            <div class="pie-chart-container">
+                <canvas id="pie-atletas" width="300" height="300"></canvas>
+            </div>
+        </section>
+    </main>
+    <button class="toggle-access" id="toggleGrayscale" title="Escala de grises">Escala de grises</button>
+    <script src="script.js"></script>
+</body>
+</html>

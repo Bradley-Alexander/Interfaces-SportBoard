@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competiciones - SportBoard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-left">
+            <span class="app-name">SportBoard</span>
+            <nav>
+                <a href="#" class="nav-link">Inicio</a>
+                <a href="#" class="nav-link">Partidos</a>
+                <a href="#" class="nav-link">Equipos</a>
+                <a href="#" class="nav-link">Atletas</a>
+                <a href="competiciones.html" class="nav-link active">Competiciones</a>
+            </nav>
+        </div>
+        <div class="navbar-right">
+            <input type="text" class="search-bar" placeholder="Buscar...">
+            <button class="icon-btn notification-btn" title="Notificaciones">🔔</button>
+            <button class="icon-btn profile-btn" title="Perfil de usuario">👤</button>
+        </div>
+    </header>
+    <div class="competiciones-layout">
+        <aside class="competiciones-sidebar">
+            <ul>
+                <li class="comp-link active" data-comp="champions">Champions League</li>
+                <li class="comp-link" data-comp="laliga">La Liga</li>
+                <li class="comp-link" data-comp="mls">MLS</li>
+                <li class="comp-link" data-comp="libertadores">Copa Libertadores</li>
+                <li class="comp-link" data-comp="ligamx">Liga MX</li>
+            </ul>
+        </aside>
+        <main class="competiciones-main">
+            <section class="comp-content" id="comp-champions">
+                <h2>Champions League - Tabla de Posiciones</h2>
+                <table class="tabla-posiciones">
+                    <thead>
+                        <tr><th>Pos</th><th>Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>Pts</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Real Madrid</td><td>6</td><td>5</td><td>1</td><td>0</td><td>16</td></tr>
+                        <tr><td>2</td><td>Manchester City</td><td>6</td><td>4</td><td>1</td><td>1</td><td>13</td></tr>
+                        <tr><td>3</td><td>Bayern Munich</td><td>6</td><td>3</td><td>2</td><td>1</td><td>11</td></tr>
+                        <tr><td>4</td><td>PSG</td><td>6</td><td>2</td><td>1</td><td>3</td><td>7</td></tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="comp-content hidden" id="comp-laliga">
+                <h2>La Liga - Tabla de Posiciones</h2>
+                <table class="tabla-posiciones">
+                    <thead>
+                        <tr><th>Pos</th><th>Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>Pts</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Barcelona</td><td>6</td><td>5</td><td>1</td><td>0</td><td>16</td></tr>
+                        <tr><td>2</td><td>Real Madrid</td><td>6</td><td>4</td><td>1</td><td>1</td><td>13</td></tr>
+                        <tr><td>3</td><td>Atlético Madrid</td><td>6</td><td>3</td><td>2</td><td>1</td><td>11</td></tr>
+                        <tr><td>4</td><td>Sevilla</td><td>6</td><td>2</td><td>1</td><td>3</td><td>7</td></tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="comp-content hidden" id="comp-mls">
+                <h2>MLS - Tabla de Posiciones</h2>
+                <table class="tabla-posiciones">
+                    <thead>
+                        <tr><th>Pos</th><th>Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>Pts</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>LA Galaxy</td><td>6</td><td>5</td><td>1</td><td>0</td><td>16</td></tr>
+                        <tr><td>2</td><td>Inter Miami</td><td>6</td><td>4</td><td>1</td><td>1</td><td>13</td></tr>
+                        <tr><td>3</td><td>NYCFC</td><td>6</td><td>3</td><td>2</td><td>1</td><td>11</td></tr>
+                        <tr><td>4</td><td>Seattle Sounders</td><td>6</td><td>2</td><td>1</td><td>3</td><td>7</td></tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="comp-content hidden" id="comp-libertadores">
+                <h2>Copa Libertadores - Tabla de Posiciones</h2>
+                <table class="tabla-posiciones">
+                    <thead>
+                        <tr><th>Pos</th><th>Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>Pts</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Boca Juniors</td><td>6</td><td>5</td><td>1</td><td>0</td><td>16</td></tr>
+                        <tr><td>2</td><td>River Plate</td><td>6</td><td>4</td><td>1</td><td>1</td><td>13</td></tr>
+                        <tr><td>3</td><td>Palmeiras</td><td>6</td><td>3</td><td>2</td><td>1</td><td>11</td></tr>
+                        <tr><td>4</td><td>Flamengo</td><td>6</td><td>2</td><td>1</td><td>3</td><td>7</td></tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="comp-content hidden" id="comp-ligamx">
+                <h2>Liga MX - Tabla de Posiciones</h2>
+                <table class="tabla-posiciones">
+                    <thead>
+                        <tr><th>Pos</th><th>Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>Pts</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>América</td><td>6</td><td>5</td><td>1</td><td>0</td><td>16</td></tr>
+                        <tr><td>2</td><td>Tigres</td><td>6</td><td>4</td><td>1</td><td>1</td><td>13</td></tr>
+                        <tr><td>3</td><td>Monterrey</td><td>6</td><td>3</td><td>2</td><td>1</td><td>11</td></tr>
+                        <tr><td>4</td><td>Chivas</td><td>6</td><td>2</td><td>1</td><td>3</td><td>7</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="competiciones.js"></script>
+</body>
+</html>

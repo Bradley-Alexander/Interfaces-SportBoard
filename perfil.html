@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - SportBoard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="perfil-layout">
+        <aside class="sidebar">
+            <nav>
+                <a href="#" class="sidebar-link"><span class="icon">🏠</span>Inicio</a>
+                <a href="#" class="sidebar-link"><span class="icon">🏆</span>Trofeos</a>
+                <a href="#" class="sidebar-link"><span class="icon">📰</span>Noticias</a>
+                <a href="#" class="sidebar-link"><span class="icon">📊</span>Estadísticas</a>
+                <a href="#" class="sidebar-link active"><span class="icon">👤</span>Perfil</a>
+            </nav>
+        </aside>
+        <main class="perfil-main">
+            <div class="perfil-tabs">
+                <button class="perfil-tab active" data-tab="siguiendo">Siguiendo</button>
+                <button class="perfil-tab" data-tab="favoritos">Favoritos</button>
+            </div>
+            <section class="perfil-content" id="perfil-siguiendo">
+                <h2>Siguiendo</h2>
+                <div class="perfil-list">
+                    <h3>Equipos</h3>
+                    <ul>
+                        <li><img src="https://dummyimage.com/32x32/b05a19/fff&text=EA" alt="Equipo A"> Equipo A</li>
+                        <li><img src="https://dummyimage.com/32x32/e6b07a/fff&text=EB" alt="Equipo B"> Equipo B</li>
+                    </ul>
+                    <h3>Jugadores</h3>
+                    <ul>
+                        <li><img src="https://dummyimage.com/32x32/444/fff&text=J1" alt="Jugador 1"> Jugador 1</li>
+                        <li><img src="https://dummyimage.com/32x32/444/fff&text=J2" alt="Jugador 2"> Jugador 2</li>
+                    </ul>
+                    <h3>Competiciones</h3>
+                    <ul>
+                        <li><img src="https://dummyimage.com/32x32/f8f4f1/444&text=C1" alt="Competición 1"> Competición 1</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="perfil-content hidden" id="perfil-favoritos">
+                <h2>Favoritos</h2>
+                <div class="perfil-list">
+                    <h3>Equipos</h3>
+                    <ul>
+                        <li><img src="https://dummyimage.com/32x32/b05a19/fff&text=EC" alt="Equipo C"> Equipo C</li>
+                    </ul>
+                    <h3>Jugadores</h3>
+                    <ul>
+                        <li><img src="https://dummyimage.com/32x32/444/fff&text=J3" alt="Jugador 3"> Jugador 3</li>
+                    </ul>
+                    <h3>Competiciones</h3>
+                    <ul>
+                        <li><img src="https://dummyimage.com/32x32/f8f4f1/444&text=C2" alt="Competición 2"> Competición 2</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="perfil.js"></script>
+</body>
+</html>
