@@ -27,9 +27,16 @@ Las interfaces fueron basadas en el sistema de diseño y componentes generados p
 2. Navega entre las secciones usando la barra superior o el panel lateral.
 3. Usa el botón "Escala de grises" para activar el modo accesible.
 
-## Personalización
-Puedes modificar los datos de las tablas, los colores en el CSS, o agregar nuevas páginas y componentes según tus necesidades.
-
+# Capturas
+![image](https://github.com/user-attachments/assets/12cb3694-f2c3-4395-b23d-36adc6f6b3ff)
 ---
+![image](https://github.com/user-attachments/assets/f5f5e257-9f14-451e-a450-c64ff5437653)
+---
+![image](https://github.com/user-attachments/assets/cec8cbb6-c9c3-43c8-9b10-d6ac9ab4f6f8)
+---
+![image](https://github.com/user-attachments/assets/84c08c9c-0199-43ea-92b1-f151884f7f33)
+---
+![image](https://github.com/user-attachments/assets/95be1ef8-6ce0-41fd-9801-724beb9600a3)
+
 
 **Desarrollado con ayuda de GitHub Copilot.**
