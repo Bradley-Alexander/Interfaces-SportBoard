@@ -37,6 +37,9 @@ Las interfaces fueron basadas en el sistema de diseño y componentes generados p
 ![image](https://github.com/user-attachments/assets/84c08c9c-0199-43ea-92b1-f151884f7f33)
 ---
 ![image](https://github.com/user-attachments/assets/95be1ef8-6ce0-41fd-9801-724beb9600a3)
+---
+![image](https://github.com/user-attachments/assets/8f329815-3dd3-49bd-9505-13b91b9c2cc6)
 
+---
 
 **Desarrollado con ayuda de GitHub Copilot.**
