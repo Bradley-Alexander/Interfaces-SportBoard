@@ -42,4 +42,3 @@ Las interfaces fueron basadas en el sistema de diseño y componentes generados p
 
 ---
 
-**Desarrollado con ayuda de GitHub Copilot.**
